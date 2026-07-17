@@ -1,0 +1,253 @@
+.recognition-section{
+
+    padding:90px 8%;
+
+    background:#f8fafc;
+
+}
+
+
+
+.recognition-header{
+
+    text-align:center;
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+
+
+.section-tag{
+
+    color:#FE7C02;
+
+    font-weight:700;
+
+}
+
+
+
+.recognition-header h2{
+
+    font-size:42px;
+
+    color:#01295A;
+
+    margin:20px 0;
+
+}
+
+
+
+.recognition-header h2 span{
+
+    color:#FE7C02;
+
+}
+
+
+
+.recognition-header p{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+.achievement-grid{
+
+    margin-top:55px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+
+
+.achievement-card{
+
+    background:white;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.06);
+
+    transition:.3s;
+
+}
+
+
+
+.achievement-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+
+
+.achievement-icon{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.achievement-card h3{
+
+    font-size:36px;
+
+    color:#FE7C02;
+
+    margin:10px 0;
+
+}
+
+
+
+.achievement-card h4{
+
+    color:#01295A;
+
+    font-size:20px;
+
+}
+
+
+
+.achievement-card p{
+
+    color:#64748b;
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+
+.recognition-banner{
+
+    margin-top:60px;
+
+    background:#01295A;
+
+    padding:35px 45px;
+
+    border-radius:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+
+
+.recognition-banner h3{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.recognition-banner p{
+
+    color:#dbeafe;
+
+}
+
+
+
+.recognition-banner button{
+
+    background:#FE7C02;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+.recognition-banner button:hover{
+
+    background:white;
+
+    color:#01295A;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+    .recognition-banner{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .recognition-header h2{
+
+        font-size:32px;
+
+    }
+
+}

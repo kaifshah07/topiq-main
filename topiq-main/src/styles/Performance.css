@@ -1,0 +1,316 @@
+.performance-section{
+
+    padding:90px 8%;
+
+    background:#f8fafc;
+
+}
+
+
+
+.performance-container{
+
+    display:grid;
+
+    grid-template-columns:0.9fr 1.1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+
+
+
+/* Dashboard */
+
+.performance-dashboard{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+
+}
+
+
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-weight:700;
+
+    color:#01295A;
+
+}
+
+
+
+.live{
+
+    color:#16a34a;
+
+    font-size:14px;
+
+}
+
+
+
+
+.score-card{
+
+    margin-top:30px;
+
+    background:#01295A;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.score-card h3{
+
+    font-size:18px;
+
+}
+
+
+
+.score{
+
+    font-size:55px;
+
+    font-weight:800;
+
+    color:#FE7C02;
+
+    margin:15px 0;
+
+}
+
+
+
+
+.progress-box{
+
+    margin-top:30px;
+
+}
+
+
+
+.progress-box div:first-child{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#01295A;
+
+    font-weight:600;
+
+}
+
+
+
+.progress-bar{
+
+    height:10px;
+
+    background:#e2e8f0;
+
+    border-radius:20px;
+
+    margin:10px 0 25px;
+
+}
+
+
+
+.progress-fill{
+
+    width:90%;
+
+    height:100%;
+
+    background:#FE7C02;
+
+    border-radius:20px;
+
+}
+
+
+
+.progress-fill.science{
+
+    width:85%;
+
+}
+
+
+
+.progress-fill.gk{
+
+    width:95%;
+
+}
+
+
+
+
+
+/* Content */
+
+
+.performance-content .section-tag{
+
+    color:#FE7C02;
+
+    font-weight:700;
+
+}
+
+
+
+.performance-content h2{
+
+    font-size:42px;
+
+    color:#01295A;
+
+    margin:20px 0;
+
+}
+
+
+
+.performance-content h2 span{
+
+    color:#FE7C02;
+
+}
+
+
+
+.performance-content>p{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+
+
+.analytics-grid{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+
+
+.analytics-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.06);
+
+}
+
+
+
+.analytics-icon{
+
+    font-size:35px;
+
+}
+
+
+
+.analytics-card h3{
+
+    color:#FE7C02;
+
+    font-size:32px;
+
+    margin:10px 0;
+
+}
+
+
+
+.analytics-card h4{
+
+    color:#01295A;
+
+    font-size:18px;
+
+}
+
+
+
+.analytics-card p{
+
+    color:#64748b;
+
+    line-height:1.5;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+    .performance-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .analytics-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .performance-content h2{
+
+        font-size:32px;
+
+    }
+
+}

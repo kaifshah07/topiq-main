@@ -1,0 +1,86 @@
+/* TOPIQ Premium Feature Cards */
+
+
+.topiq-feature-card {
+
+    background: rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(18px);
+
+    border-radius: 28px;
+
+    border:1px solid rgba(255,255,255,0.8);
+
+    box-shadow:
+    0 20px 60px rgba(1,41,90,0.08);
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+
+
+.topiq-feature-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 30px 80px rgba(1,41,90,0.15);
+
+}
+
+
+
+
+.topiq-feature-icon {
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #01295A,
+        #FE7C02
+    );
+
+    color:white;
+
+    box-shadow:
+    0 10px 25px rgba(254,124,2,.25);
+
+}
+
+
+
+
+.topiq-feature-title {
+
+    color:#01295A;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+
+
+.topiq-feature-description {
+
+    color:#64748b;
+
+    line-height:1.7;
+
+}

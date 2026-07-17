@@ -1,0 +1,23 @@
+.shadow-soft{
+
+box-shadow:
+
+0 10px 40px rgba(15,23,42,.08);
+
+}
+
+.shadow-hover{
+
+transition:.35s;
+
+}
+
+.shadow-hover:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 30px 70px rgba(15,23,42,.15);
+
+}
