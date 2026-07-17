@@ -1,6 +1,5 @@
 // src/components/sections/franchise/Franchise.jsx
 
-import AnimatedSection from "../../../animations/AnimatedSection";
 import FranchiseHero from "./FranchiseHero";
 import FranchiseStats from "./FranchiseStats";
 import FranchiseBenefits from "./FranchiseBenefits";
@@ -18,7 +17,7 @@ export default function Franchise() {
       <div className="absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] [background-size:40px_40px] pointer-events-none" />
 
       <div className="container relative z-10 mx-auto max-w-7xl px-0 lg:px-8 w-full flex flex-col items-center">
-        <AnimatedSection animation="fadeUp" className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center">
           
           {/* 1. Hero Title & Highlights */}
           <FranchiseHero />
@@ -43,7 +42,7 @@ export default function Franchise() {
             <FranchiseProcess />
           </div>
 
-        </AnimatedSection>
+        </div>
       </div>
     </section>
   );
