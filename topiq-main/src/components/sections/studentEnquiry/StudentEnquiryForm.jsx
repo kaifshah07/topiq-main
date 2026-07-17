@@ -14,6 +14,10 @@ import {
   Users,
 } from "lucide-react";
 import studentEnquiryData from "./studentEnquiryData";
+// import { submitStudentEnquiry } from "../../services/studentService";
+// import { submitStudentEnquiry } from "../../../services/studentService";
+import { submitStudentEnquiry } from "../../../services/studentService";
+
 
 const initialForm = {
   studentName: "",
@@ -53,30 +57,36 @@ export default function StudentEnquiryForm() {
   };
 
   const submitForm = async (event) => {
-    event.preventDefault();
-    setStatus({ type: "", message: "" });
-    setIsSubmitting(true);
+  event.preventDefault();
 
-    try {
-      const response = await fetch(studentEnquiryData.api.endpoint, {
-        method: studentEnquiryData.api.method,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+  setStatus({
+    type: "",
+    message: "",
+  });
 
-      if (!response.ok) {
-        const result = await response.json().catch(() => null);
-        throw new Error(result?.message || "We could not submit your enquiry. Please try again.");
-      }
+  setIsSubmitting(true);
 
-      setForm(initialForm);
-      setStatus({ type: "success", message: studentEnquiryData.successMessage });
-    } catch (error) {
-      setStatus({ type: "error", message: error.message || "Something went wrong. Please try again." });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  try {
+    await submitStudentEnquiry(form);
+
+    setForm(initialForm);
+
+    setStatus({
+      type: "success",
+      message: studentEnquiryData.successMessage,
+    });
+  } catch (error) {
+    setStatus({
+      type: "error",
+      message:
+        error.response?.data?.message ||
+        error.message ||
+        "Something went wrong.",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const selectClass = "w-full appearance-none rounded-xl border border-slate-200 bg-white py-3.5 pr-10 text-sm text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100";
   const inputClass = "w-full rounded-xl border border-slate-200 bg-white py-3.5 text-sm text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100";
