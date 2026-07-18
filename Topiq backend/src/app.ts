@@ -14,8 +14,10 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://topiq-main.vercel.app/", 
+      "https://topiq-main.vercel.app",
     ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
