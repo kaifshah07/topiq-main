@@ -16,7 +16,7 @@ import {
 import studentEnquiryData from "./studentEnquiryData";
 // import { submitStudentEnquiry } from "../../services/studentService";
 // import { submitStudentEnquiry } from "../../../services/studentService";
-import { submitStudentEnquiry } from "../../../services/studentService";
+import { sendStudentEnquiry } from "../../../services/emailService";
 
 
 const initialForm = {
@@ -56,7 +56,7 @@ export default function StudentEnquiryForm() {
     setForm((current) => ({ ...current, [name]: value }));
   };
 
-  const submitForm = async (event) => {
+ const submitForm = async (event) => {
   event.preventDefault();
 
   setStatus({
@@ -67,26 +67,36 @@ export default function StudentEnquiryForm() {
   setIsSubmitting(true);
 
   try {
-    await submitStudentEnquiry(form);
+    await sendStudentEnquiry({
+      student_name: form.studentName,
+      parent_name: form.parentName,
+      mobile: form.mobile,
+      email: form.email,
+      class: form.class,
+      exam: form.exam,
+      medium: form.medium,
+      learning_mode: form.learningMode,
+      city: form.city,
+      message: form.message,
+    });
 
     setForm(initialForm);
 
     setStatus({
       type: "success",
-      message: studentEnquiryData.successMessage,
+      message: "Enquiry submitted successfully!",
     });
   } catch (error) {
+    console.error(error);
+
     setStatus({
       type: "error",
-      message:
-        error.response?.data?.message ||
-        error.message ||
-        "Something went wrong.",
+      message: "Failed to submit enquiry.",
     });
   } finally {
     setIsSubmitting(false);
   }
-};
+};;
 
   const selectClass = "w-full appearance-none rounded-xl border border-slate-200 bg-white py-3.5 pr-10 text-sm text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100";
   const inputClass = "w-full rounded-xl border border-slate-200 bg-white py-3.5 text-sm text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100";

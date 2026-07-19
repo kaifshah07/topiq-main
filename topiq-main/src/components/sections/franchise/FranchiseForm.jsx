@@ -18,6 +18,7 @@ import { submitFranchiseEnquiry } from "../../../services/franchiseService";
 import {
   buttonHover,
 } from "../../../utils/animationVariants";
+import { sendFranchiseEnquiry } from "../../../services/emailService";
 
 
 
@@ -78,54 +79,40 @@ const [status, setStatus] = useState({
 
 
  const handleSubmit = async (e) => {
-
   e.preventDefault();
 
-  setStatus({
-    type: "",
-    message: "",
-  });
-
-  setIsSubmitting(true);
-
   try {
-
-    await submitFranchiseEnquiry(formData);
-
-    setStatus({
-      type: "success",
-      message: "Your franchise enquiry has been submitted successfully.",
+    await sendFranchiseEnquiry({
+      name: formData.name,
+      mobile: formData.mobile,
+      email: formData.email,
+      city: formData.city,
+      district: formData.district,
+      state: formData.state,
+      business: formData.business,
+      investment: formData.investment,
+      location: formData.location,
+      message: formData.message,
     });
+
+    alert("Franchise enquiry submitted successfully!");
 
     setFormData({
-      name:"",
-      mobile:"",
-      email:"",
-      city:"",
-      district:"",
-      state:"",
-      business:"",
-      investment:"",
-      location:"",
-      message:""
+      name: "",
+      mobile: "",
+      email: "",
+      city: "",
+      district: "",
+      state: "",
+      business: "",
+      investment: "",
+      location: "",
+      message: "",
     });
-
   } catch (error) {
-
-    setStatus({
-      type: "error",
-      message:
-        error.response?.data?.message ||
-        error.message ||
-        "Failed to submit enquiry.",
-    });
-
-  } finally {
-
-    setIsSubmitting(false);
-
+    console.error(error);
+    alert("Failed to submit enquiry.");
   }
-
 };
 
 
