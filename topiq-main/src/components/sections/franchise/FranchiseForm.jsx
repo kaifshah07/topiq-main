@@ -13,10 +13,12 @@ import {
 
 import FadeUp from "../../../animations/FadeUp";
 import ScaleIn from "../../../animations/ScaleIn";
+import { submitFranchiseEnquiry } from "../../../services/franchiseService";
 
 import {
   buttonHover,
 } from "../../../utils/animationVariants";
+import { sendFranchiseEnquiry } from "../../../services/emailService";
 
 
 
@@ -42,7 +44,6 @@ export default function FranchiseForm() {
 
 
   const [formData,setFormData] = useState({
-
     name:"",
     mobile:"",
     email:"",
@@ -55,7 +56,12 @@ export default function FranchiseForm() {
     message:""
 
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
+const [status, setStatus] = useState({
+  type: "",
+  message: "",
+});
 
 
   const handleChange = (e)=>{
@@ -72,27 +78,42 @@ export default function FranchiseForm() {
 
 
 
-  const handleSubmit=(e)=>{
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    e.preventDefault();
+  try {
+    await sendFranchiseEnquiry({
+      name: formData.name,
+      mobile: formData.mobile,
+      email: formData.email,
+      city: formData.city,
+      district: formData.district,
+      state: formData.state,
+      business: formData.business,
+      investment: formData.investment,
+      location: formData.location,
+      message: formData.message,
+    });
 
+    alert("Franchise enquiry submitted successfully!");
 
-    console.log(
-      "Franchise Enquiry:",
-      formData
-    );
-
-
-    /*
-      Future API:
-
-      POST /api/franchise-enquiry
-
-    */
-
-
-  };
-
+    setFormData({
+      name: "",
+      mobile: "",
+      email: "",
+      city: "",
+      district: "",
+      state: "",
+      business: "",
+      investment: "",
+      location: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error(error);
+    alert("Failed to submit enquiry.");
+  }
+};
 
 
 
@@ -241,7 +262,19 @@ export default function FranchiseForm() {
 
 
 
+      {status.message && (
 
+  <div
+    className={`mb-6 rounded-xl px-4 py-3 text-sm ${
+      status.type === "success"
+        ? "bg-emerald-50 text-emerald-700"
+        : "bg-red-50 text-red-700"
+    }`}
+  >
+    {status.message}
+  </div>
+
+)}
 
         <form
           onSubmit={handleSubmit}
@@ -403,32 +436,35 @@ export default function FranchiseForm() {
 
           <motion.button
 
-            {...buttonHover}
+  {...buttonHover}
 
-            type="submit"
+  type="submit"
 
-            className="
-              flex
-              w-full
-              items-center
-              justify-center
-              gap-3
-              rounded-2xl
-              bg-gradient-to-r
-              from-blue-600
-              via-indigo-600
-              to-cyan-500
-              px-8
-              py-4
-              font-semibold
-              text-white
-              shadow-lg
-              shadow-blue-200
-            "
+  disabled={isSubmitting}
 
-          >
+  className="
+    flex
+    w-full
+    items-center
+    justify-center
+    gap-3
+    rounded-2xl
+    bg-gradient-to-r
+    from-blue-600
+    via-indigo-600
+    to-cyan-500
+    px-8
+    py-4
+    font-semibold
+    text-white
+    shadow-lg
+    shadow-blue-200
+    disabled:opacity-70
+    disabled:cursor-not-allowed
+  "
+>
 
-            Submit Franchise Application
+            {isSubmitting ? "Submitting..." : "Submit Franchise Application"}
 
             <Send size={20}/>
 

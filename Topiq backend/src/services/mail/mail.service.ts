@@ -9,12 +9,25 @@ export class MailService {
   static async sendStudentEnquiryEmail(
     enquiry: IStudentEnquiry
   ): Promise<void> {
-    await transporter.sendMail({
-      from: env.MAIL_FROM,
-      to: env.ADMIN_EMAIL,
-      subject: "📚 New Student Enquiry",
-      html: studentEnquiryTemplate(enquiry),
-    });
+    // await transporter.sendMail({
+    //   from: env.MAIL_FROM,
+    //   to: env.ADMIN_EMAIL,
+    //   subject: "📚 New Student Enquiry",
+    //   html: studentEnquiryTemplate(enquiry),
+    // });
+
+try {
+  await transporter.sendMail({
+    from: env.MAIL_FROM,
+    to: env.ADMIN_EMAIL,
+    subject: "📚 New Student Enquiry",
+    html: studentEnquiryTemplate(enquiry),
+  });
+} catch (error) {
+  console.error("Failed to send student enquiry email:", error);
+  throw new Error("Unable to send student enquiry email.");
+}
+
   }
 
   static async sendFranchiseEnquiryEmail(
