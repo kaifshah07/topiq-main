@@ -40,7 +40,8 @@ export default function FAQItem({
         {...cardHover}
         className="
           overflow-hidden
-          rounded-3xl
+          h-full
+          rounded-2xl
           border
           border-slate-200
           bg-white
@@ -62,9 +63,9 @@ export default function FAQItem({
             w-full
             items-center
             justify-between
-            gap-6
-            px-6
-            py-5
+            gap-2
+            px-3
+            py-3
             text-left
             transition-colors
             duration-300
@@ -73,9 +74,9 @@ export default function FAQItem({
         >
           <h3
             className="
-              text-lg
+              text-sm
               font-semibold
-              leading-7
+              leading-5
               text-slate-900
             "
           >
@@ -88,8 +89,8 @@ export default function FAQItem({
             transition={{ duration: 0.25 }}
             className="
               flex
-              h-11
-              w-11
+              h-8
+              w-8
               shrink-0
               items-center
               justify-center
@@ -134,14 +135,15 @@ export default function FAQItem({
                 className="
                   border-t
                   border-slate-100
-                  px-6
-                  pb-6
-                  pt-5
+                  px-3
+                  pb-3
+                  pt-3
                 "
               >
                 <p
                   className="
-                    leading-8
+                    text-xs
+                    leading-5
                     text-slate-600
                   "
                 >

@@ -43,6 +43,7 @@ className="
 grid
 gap-8
 md:grid-cols-4
+talent-test-mobile-row
 "
 >
 

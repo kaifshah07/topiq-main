@@ -13,7 +13,6 @@ import {
   Users,
 } from "lucide-react";
 
-
 const whyTopiqFeatures = [
 
   {
@@ -84,38 +83,27 @@ export default function WhyTopiqGrid(){
 
   return (
 
-    <StaggerContainer
-
-      className="
-      mt-14
-      grid
-      gap-8
-      sm:grid-cols-2
-      lg:grid-cols-3
-      ui-card-grid
-      why-feature-grid
-      "
-
-    >
-
-      {
-        whyTopiqFeatures.map(
-          (feature)=>(
-
-            <WhyTopiqCard
-
-              key={feature.id}
-
-              {...feature}
-
-            />
-
-          )
-        )
-      }
-
-
-    </StaggerContainer>
+   <StaggerContainer
+  className="
+    mt-14
+    grid
+    grid-cols-3
+    gap-3
+    sm:grid-cols-3
+    md:grid-cols-3
+    lg:grid-cols-3
+    ui-card-grid
+    why-feature-grid
+    mobile-grid-3
+  "
+>
+  {whyTopiqFeatures.map((feature) => (
+    <WhyTopiqCard
+      key={feature.id}
+      {...feature}
+    />
+  ))}
+</StaggerContainer>
 
   );
 

@@ -6,7 +6,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-import NestedSiteShellContext from "../../context/SiteShellContext";
 
 export default function SiteLayout() {
   const { pathname } = useLocation();
@@ -23,13 +22,8 @@ export default function SiteLayout() {
     <div className="flex min-h-screen w-full flex-col overflow-x-hidden">
       <Navbar />
 
-      <main
-        id="main-content"
-        className="w-full flex-1"
-      >
-        <NestedSiteShellContext.Provider value={true}>
-          <Outlet />
-        </NestedSiteShellContext.Provider>
+      <main id="main-content" className="w-full flex-1">
+        <Outlet />
       </main>
 
       <Footer />

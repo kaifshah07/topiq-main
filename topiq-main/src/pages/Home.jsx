@@ -1,6 +1,3 @@
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
-
 import Hero from "../components/sections/hero/Hero";
 import Statistics from "../components/sections/statistics/Statistics";
 import About from "../components/sections/about/About";
@@ -25,65 +22,13 @@ import DownloadApp from "../components/sections/downloadApp/DownloadApp";
 import Franchise from "../components/sections/franchise/Franchise";
 import CTA from "../components/sections/cta/CTA";
 
+const sections = [
+  Hero, Statistics, About, WhyTopiq, ExamCategories, HowItWorks, SmartExam,
+  Performance, LearningGroups, TalentTest, Eligibility, Scholarship, Awards,
+  Recognition, Leaderboard, VisionMission, Founder, Testimonials, FAQ,
+  StudentEnquiry, DownloadApp, Franchise, CTA,
+];
 
-export default function Home(){
-
-return(
-
-<>
-
-<Navbar/>
-
-<Hero/>
-
-<Statistics/>
-
-<About/>
-
-<WhyTopiq/>
-
-<ExamCategories/>
-
-<HowItWorks/>
-
-<SmartExam/>
-
-<Performance/>
-
-<LearningGroups/>
-
-<TalentTest/>
-
-<Eligibility/>
-
-<Scholarship/>
-
-<Awards/>
-
-<Recognition/>
-
-<Leaderboard/>
-
-<VisionMission/>
-
-<Founder/>
-
-<Testimonials/>
-
-<FAQ/>
-
-<StudentEnquiry/>
-
-<DownloadApp/>
-
-<Franchise/>
-
-<CTA/>
-
-<Footer/>
-
-</>
-
-)
-
+export default function Home() {
+  return sections.map((Section, index) => <Section key={Section.name || index} />);
 }

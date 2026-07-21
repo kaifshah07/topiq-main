@@ -56,7 +56,7 @@ export default function HowItWorksStep({
         className="
         group
         relative
-        rounded-3xl
+        rounded-2xl
         border
         border-slate-200
         bg-white

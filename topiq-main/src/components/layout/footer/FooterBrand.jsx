@@ -13,7 +13,7 @@ export default function FooterBrand() {
       <div className="max-w-sm flex flex-col items-start gap-y-6">
         
         {/* Brand Link */}
-        <motion.a href="#hero" whileHover={{ scale: 1.02 }} className="inline-flex items-center gap-3">
+        <motion.a href="#home" whileHover={{ scale: 1.02 }} className="inline-flex items-center gap-3">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#01295A] to-blue-600 text-white shadow-md shadow-blue-900/10">
             <GraduationCap size={30} />
           </div>

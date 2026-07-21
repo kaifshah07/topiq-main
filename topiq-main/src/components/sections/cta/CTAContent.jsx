@@ -44,7 +44,7 @@ export default function CTAContent() {
       {/* Benefits Layout */}
       <div className="w-full">
         <FadeUp delay={0.35}>
-          <div className="grid gap-x-6 gap-y-3.5 sm:grid-cols-2 text-sm font-medium text-slate-700">
+          <div className="cta-benefits-mobile-grid grid gap-x-6 gap-y-3.5 sm:grid-cols-2 text-sm font-medium text-slate-700">
             {ctaData.benefits.map((benefit) => (
               <motion.div
                 key={benefit.id}

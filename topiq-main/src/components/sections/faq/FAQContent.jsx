@@ -57,7 +57,7 @@ export default function FAQContent() {
 
   return (
 
-    <div className="mx-auto max-w-3xl text-center">
+    <div className="mx-auto max-w-3xl text-center lg:sticky lg:top-28 lg:text-left">
 
       {/* Badge */}
 
@@ -95,13 +95,13 @@ export default function FAQContent() {
           {...iconHover}
           className="
             mx-auto
-            mt-6
+            mt-5
             flex
-            h-20
-            w-20
+            h-14
+            w-14
             items-center
             justify-center
-            rounded-3xl
+            rounded-2xl
             bg-gradient-to-br
             from-blue-600
             via-indigo-600
@@ -110,7 +110,7 @@ export default function FAQContent() {
             shadow-xl
           "
         >
-          <HelpCircle size={36} />
+          <HelpCircle size={26} />
 
         </motion.div>
 
@@ -120,8 +120,8 @@ export default function FAQContent() {
 
       <h2
         className="
-          mt-8
-          text-4xl
+          mt-5
+          text-3xl
           font-extrabold
           leading-tight
           text-slate-900
@@ -157,10 +157,10 @@ export default function FAQContent() {
         <p
           className="
             mx-auto
-            mt-6
+            mt-4
             max-w-2xl
-            text-lg
-            leading-8
+            text-base
+            leading-7
             text-slate-600
           "
         >
@@ -178,10 +178,11 @@ export default function FAQContent() {
 
         <div
           className="
-            mt-12
+            faq-highlight-grid
+            mt-6
             grid
-            gap-6
-            sm:grid-cols-3
+            grid-cols-3
+            gap-2
           "
         >
           {highlights.map((item) => {
@@ -197,7 +198,7 @@ export default function FAQContent() {
                   border
                   border-slate-200
                   bg-white
-                  p-6
+                  p-3
                   shadow-sm
                 "
               >
@@ -205,23 +206,23 @@ export default function FAQContent() {
                   className="
                     mx-auto
                     flex
-                    h-14
-                    w-14
+                    h-9
+                    w-9
                     items-center
                     justify-center
-                    rounded-2xl
+                    rounded-xl
                     bg-blue-50
                     text-blue-600
                   "
                 >
-                  <Icon size={26} />
+                  <Icon size={18} />
 
                 </div>
 
                 <h3
                   className="
-                    mt-4
-                    text-lg
+                    mt-2
+                    text-xs
                     font-semibold
                     text-slate-900
                   "

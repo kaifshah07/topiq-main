@@ -11,7 +11,7 @@ export default function MainLayout({
 
       <Navbar />
 
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-0">
         {children}
       </main>
 

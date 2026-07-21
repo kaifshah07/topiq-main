@@ -134,6 +134,8 @@ export default function Statistics() {
             sm:grid-cols-2
             lg:grid-cols-4
             lg:gap-8
+            mobile-grid-3
+            achievements-compact-grid
           "
         >
           {statisticsData.map((item) => (

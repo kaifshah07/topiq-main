@@ -11,7 +11,7 @@ export default function CTAButtons({ primary, secondary }) {
       <motion.a
         {...buttonHover}
         href={primary.href}
-        className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto rounded-2xl bg-white px-8 h-14 text-sm font-bold text-white shadow-lg shadow-blue-900/10 transition-all duration-300 hover:bg-[#013A80]"
+        className="inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#01295A] to-blue-600 px-8 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl sm:w-auto"
       >
         {primary.text}
         <ArrowRight size={16} />

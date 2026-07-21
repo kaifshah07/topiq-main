@@ -26,7 +26,7 @@ export default function DesktopButtons() {
           className="
             h-10
             xl:h-11
-            rounded-xl
+            rounded-full
             border
             border-slate-200
             bg-white
@@ -65,7 +65,7 @@ export default function DesktopButtons() {
           xl:h-11
           items-center
           gap-2
-          rounded-xl
+          rounded-full
           bg-[#01295A]
           px-5
           xl:px-6

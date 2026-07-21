@@ -96,6 +96,7 @@ export default function FranchiseBenefits() {
           gap-8
           sm:grid-cols-2
           lg:grid-cols-3
+          franchise-benefits-mobile-grid
         "
       >
         {franchiseData.benefits.map((item) => {

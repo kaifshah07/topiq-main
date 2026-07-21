@@ -104,6 +104,7 @@ export default function DashboardStats(){
       lg:gap-8
       sm:grid-cols-2
       lg:grid-cols-4
+      mobile-grid-3
       "
 
     >

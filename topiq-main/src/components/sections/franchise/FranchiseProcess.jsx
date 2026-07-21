@@ -76,8 +76,8 @@ export default function FranchiseProcess() {
 
       <h2
         className="
-          mt-7
-          text-4xl
+          mt-5
+          text-3xl
           font-extrabold
           leading-tight
           text-slate-900
@@ -116,10 +116,10 @@ export default function FranchiseProcess() {
 
         <p
           className="
-            mt-5
+            mt-3
             max-w-xl
-            text-lg
-            leading-8
+            text-base
+            leading-7
             text-slate-600
           "
         >
@@ -143,9 +143,11 @@ export default function FranchiseProcess() {
       <div
         className="
           franchise-process-list
-          relative
-          mt-12
-          space-y-8
+          mt-8
+          grid
+          grid-cols-2
+          gap-3
+          lg:grid-cols-5
         "
       >
 
@@ -154,7 +156,7 @@ export default function FranchiseProcess() {
 
         <div
           className="
-            absolute
+            hidden
             left-7
             top-8
             h-[calc(100%-60px)]
@@ -180,8 +182,7 @@ export default function FranchiseProcess() {
               className="
                 franchise-process-row
                 relative
-                flex
-                gap-6
+                h-full
               "
             >
 
@@ -192,20 +193,22 @@ export default function FranchiseProcess() {
               <div
                 className="
                   franchise-step-number
-                  relative
+                  absolute
+                  left-3
+                  top-3
                   z-10
                   flex
-                  h-16
-                  w-16
+                  h-10
+                  w-10
                   shrink-0
                   items-center
                   justify-center
-                  rounded-2xl
+                  rounded-xl
                   bg-gradient-to-br
                   from-blue-600
                   via-indigo-600
                   to-cyan-500
-                  text-lg
+                  text-sm
                   font-bold
                   text-white
                   shadow-lg
@@ -226,12 +229,15 @@ export default function FranchiseProcess() {
               <div
                 className="
                   franchise-process-card
-                  flex-1
-                  rounded-3xl
+                  h-full
+                  rounded-2xl
                   border
                   border-slate-200
                   bg-white
-                  p-6
+                  pb-4
+                  pl-4
+                  pr-4
+                  pt-16
                   shadow-sm
                   transition-all
                   duration-300
@@ -252,7 +258,7 @@ export default function FranchiseProcess() {
 
                   <h3
                     className="
-                      text-xl
+                      text-base
                       font-bold
                       text-slate-900
                     "
@@ -278,9 +284,9 @@ export default function FranchiseProcess() {
 
                 <p
                   className="
-                    mt-3
-                    text-sm
-                    leading-7
+                    mt-2
+                    text-xs
+                    leading-5
                     text-slate-600
                   "
                 >
@@ -296,11 +302,11 @@ export default function FranchiseProcess() {
                   <div
                     className="
                       franchise-next-step
-                      mt-4
+                      mt-3
                       flex
                       items-center
                       gap-2
-                      text-sm
+                      text-xs
                       font-semibold
                       text-blue-600
                     "

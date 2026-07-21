@@ -147,10 +147,11 @@ export default function TestimonialsContent() {
           className="
             mt-12
             grid
-            grid-cols-1
+            grid-cols-3
             gap-5
             sm:grid-cols-3
             sm:gap-6
+            testimonials-stats-row
           "
         >
           {stats.map((item) => (

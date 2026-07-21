@@ -2,21 +2,14 @@ export default function PrivacyPolicy(){
 
   return (
 
-    <div className="
-      min-h-screen
-      bg-white
-      px-6
-      py-20
-    ">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 py-28 sm:px-6 sm:py-32">
 
-      <div className="
-        max-w-5xl
-        mx-auto
-      ">
+      <div className="mx-auto max-w-4xl rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.07)] sm:p-10 lg:p-14">
 
 
         <h1 className="
-          text-4xl
+          text-3xl
+          sm:text-4xl
           md:text-5xl
           font-bold
           text-[#01295A]
@@ -38,11 +31,11 @@ export default function PrivacyPolicy(){
           mt-10
           space-y-8
           text-slate-700
-          leading-relaxed
+          leading-8
         ">
 
 
-          <section>
+          <section className="border-b border-slate-100 pb-8 last:border-0 last:pb-0">
 
             <h2 className="
               text-2xl
@@ -62,7 +55,7 @@ export default function PrivacyPolicy(){
 
 
 
-          <section>
+          <section className="border-b border-slate-100 pb-8 last:border-0 last:pb-0">
 
             <h2 className="
               text-2xl
@@ -82,7 +75,7 @@ export default function PrivacyPolicy(){
 
 
 
-          <section>
+          <section className="border-b border-slate-100 pb-8 last:border-0 last:pb-0">
 
             <h2 className="
               text-2xl
@@ -102,7 +95,7 @@ export default function PrivacyPolicy(){
 
 
 
-          <section>
+          <section className="border-b border-slate-100 pb-8 last:border-0 last:pb-0">
 
             <h2 className="
               text-2xl
@@ -121,7 +114,7 @@ export default function PrivacyPolicy(){
 
 
 
-          <section>
+          <section className="border-b border-slate-100 pb-8 last:border-0 last:pb-0">
 
             <h2 className="
               text-2xl

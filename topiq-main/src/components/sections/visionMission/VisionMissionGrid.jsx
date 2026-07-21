@@ -66,6 +66,7 @@ export default function VisionMissionGrid(){
       grid
       gap-8
       lg:grid-cols-2
+      vision-mission-mobile-row
       "
 
 

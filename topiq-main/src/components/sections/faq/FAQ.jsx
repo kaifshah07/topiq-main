@@ -31,8 +31,8 @@ export default function FAQ() {
         relative
         overflow-hidden
         bg-white
-        py-20
-        lg:py-28
+        py-12
+        lg:py-16
       "
     >
       {/* Background Decorations */}
@@ -69,26 +69,24 @@ export default function FAQ() {
           relative
           z-10
           mx-auto
-          max-w-4xl
+          max-w-7xl
           px-6
           lg:px-8
         "
       >
         <AnimatedSection animation="fadeUp">
-          {/* Section Heading */}
+          <div className="grid items-start gap-7 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-10">
+            <FAQContent />
 
-          <FAQContent />
-
-          {/* FAQ Accordion */}
-
-          <div className="mt-16 space-y-5">
-            {faqData.map((item) => (
-              <FAQItem
-                key={item.id}
-                question={item.question}
-                answer={item.answer}
-              />
-            ))}
+            <div className="faq-list-grid grid grid-cols-2 gap-2.5 sm:gap-3">
+              {faqData.map((item) => (
+                <FAQItem
+                  key={item.id}
+                  question={item.question}
+                  answer={item.answer}
+                />
+              ))}
+            </div>
           </div>
         </AnimatedSection>
       </div>

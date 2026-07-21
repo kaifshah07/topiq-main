@@ -56,7 +56,12 @@ export default function AwardsIllustration() {
         className="
         relative
         mx-auto
-        max-w-xl
+        w-full
+        max-w-[320px]
+        sm:max-w-[360px]
+        lg:max-w-[420px]
+        page-visual
+        awards-page-visual
         "
       >
 
@@ -330,7 +335,7 @@ export default function AwardsIllustration() {
 
           <img
 
-            src="/images/awards-scholarships.webp"
+            src="/student.png"
 
             alt="TOPIQ Awards and Scholarships"
 

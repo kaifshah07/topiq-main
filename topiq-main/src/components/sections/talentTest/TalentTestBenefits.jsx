@@ -57,6 +57,7 @@ className="
 grid
 gap-8
 md:grid-cols-3
+talent-benefits-mobile-row
 "
 >
 

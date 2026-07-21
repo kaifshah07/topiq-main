@@ -426,7 +426,7 @@ section img {
   section .grid { row-gap: 2rem; }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 500px) {
   #about .about-features-grid { grid-template-columns: 1fr; }
   section > .container,
   footer > .container,
@@ -439,6 +439,129 @@ section img {
   section form { border-radius: 1.35rem; }
   .btn-primary,
   .btn-secondary { width: 100%; min-height: 3.125rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Site-wide UI polish: shared rhythm, resilient media and predictable states.
+   These rules intentionally work alongside existing Tailwind utilities.
+   -------------------------------------------------------------------------- */
+
+:root {
+  --site-gutter: clamp(1rem, 3vw, 2rem);
+  --section-space: clamp(4.5rem, 8vw, 7rem);
+  --content-width: 1280px;
+}
+
+#main-content > section:first-child:not(#home),
+#main-content > main > section:first-child {
+  padding-top: clamp(7.75rem, 11vw, 9.5rem);
+}
+
+#main-content > section,
+#main-content > main > section {
+  isolation: isolate;
+}
+
+.container {
+  width: min(calc(100% - (var(--site-gutter) * 2)), var(--content-width));
+}
+
+section :is(img, video, iframe) {
+  max-width: 100%;
+}
+
+section iframe,
+section video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+img[loading="lazy"] {
+  background: linear-gradient(110deg, #f1f5f9 8%, #f8fafc 18%, #f1f5f9 33%);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 3px;
+}
+
+.surface-card,
+[class*="rounded-3xl"][class*="bg-white"] {
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+#main-content :is(.grid > [class*="rounded"], .grid > article) {
+  min-width: 0;
+}
+
+#main-content [class*="grid-cols-3"],
+#main-content [class*="grid-cols-4"] {
+  align-items: stretch;
+}
+
+#main-content [class*="grid-cols-3"] > *,
+#main-content [class*="grid-cols-4"] > * {
+  min-width: 0;
+}
+
+#main-content [class*="shadow"] {
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+#main-content [class*="rounded"][class*="border"] {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+#main-content [class*="rounded"][class*="border"]:hover {
+  border-color: rgba(96, 165, 250, 0.48);
+}
+
+.registration-page {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.14), transparent 26rem),
+    linear-gradient(135deg, #f8fbff, #f8fafc 55%, #fffaf5);
+}
+
+.registration-shell {
+  width: min(100%, 72rem);
+}
+
+.registration-progress-label {
+  color: #475569;
+  text-align: center;
+}
+
+@media (max-width: 639px) {
+  .registration-page { padding-top: 7rem; padding-bottom: 4rem; }
+  .registration-page h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+  .registration-progress { gap: 0.25rem; margin-bottom: 2.5rem; }
+  .registration-progress-circle { width: 2.35rem; height: 2.35rem; font-size: 0.9rem; }
+  .registration-progress-line { top: 1.15rem; }
+  .registration-progress-label { font-size: 0.62rem; line-height: 1.2; }
+  .registration-actions { gap: 0.75rem; }
+  .registration-actions button { padding-inline: 1rem; }
+}
+
+@media (max-width: 767px) {
+  #main-content > section:first-child:not(#home),
+  #main-content > main > section:first-child { padding-top: 7rem; }
+  #main-content [class*="lg:grid-cols-2"] { gap: 2.5rem; }
 }
 
 /* =========================================================
@@ -1574,8 +1697,8 @@ section [class*="rounded-2xl"] > svg {
 }
 
 #exam-categories .exam-support-flow {
-  gap: 6rem;
-  margin-top: 7rem !important;
+  gap: 1.5rem;
+  margin-top: 3rem !important;
 }
 
 #exam-categories .exam-support-flow > * {
@@ -1589,7 +1712,7 @@ section [class*="rounded-2xl"] > svg {
 #exam-categories .exam-preparation-copy {
   max-width: 52rem;
   margin-inline: auto;
-  padding-top: 5rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(148, 163, 184, 0.24);
   text-align: center;
 }
@@ -1658,12 +1781,12 @@ section [class*="rounded-2xl"] > svg {
   #why-topiq .why-feature-grid article { min-height: 0; }
 
   #exam-categories .exam-support-flow {
-    gap: 4rem;
-    margin-top: 5rem !important;
+    gap: 1.25rem;
+    margin-top: 2.5rem !important;
   }
 
   #exam-categories .exam-preparation-copy {
-    padding-top: 3.5rem;
+    padding-top: 1.25rem;
   }
 
   #exam-categories .exam-preparation-copy [class*="space-y"] {
@@ -1782,15 +1905,15 @@ section [class*="rounded-2xl"] > svg {
 
 /* Hero composition matched to the supplied premium training-site reference. */
 #home {
-  min-height: min(900px, 100vh);
-  padding-top: 11rem;
-  padding-bottom: 5.5rem;
-  background: #fff;
+  min-height: auto;
+  padding-top: 1 rem;
+  padding-bottom: 0.5 rem;
+  background: #f7eeee;
 }
 
 #home > .container {
-  width: min(100% - 3rem, 1380px);
-  max-width: 1380px;
+  width: min(90% - 3rem, 1380px);
+  max-width: 1180px;
 }
 
 #home > .container > .grid {
@@ -1861,7 +1984,7 @@ section [class*="rounded-2xl"] > svg {
 @media (max-width: 1023px) {
   #home {
     min-height: auto;
-    padding-top: 9rem;
+    padding-top: 7rem;
   }
 
   #home > .container > .grid {
@@ -1886,7 +2009,7 @@ section [class*="rounded-2xl"] > svg {
 
 @media (max-width: 639px) {
   #home {
-    padding-top: 7.5rem;
+    padding-top: 6.5rem;
     padding-bottom: 4.5rem;
   }
 

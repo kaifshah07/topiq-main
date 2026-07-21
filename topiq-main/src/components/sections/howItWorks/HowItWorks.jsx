@@ -148,16 +148,9 @@ export default function HowItWorks(){
 
           </div>
 
-
-
-
-
-
-
-
           <div className="section-cta-band">
             <ScaleIn delay={0.7}>
-              <Link to="/register">
+              <Link to="/">
                 <motion.button
                   {...buttonHover}
                   className="section-cta-button"

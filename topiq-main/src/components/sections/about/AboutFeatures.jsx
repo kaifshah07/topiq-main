@@ -54,6 +54,7 @@ export default function AboutFeatures() {
           gap-6
           sm:grid-cols-2
           lg:grid-cols-4
+          mobile-grid-3
         "
       >
         {features.map((feature) => (

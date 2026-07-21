@@ -19,7 +19,7 @@ export default function AboutImage() {
 
   return (
     <SlideLeft>
-      <div className="relative mx-auto flex w-full max-w-xl items-center justify-center">
+      <div className="page-visual about-page-visual relative mx-auto flex w-full max-w-[120px] sm:max-w-[120px] lg:max-w-[400px] items-center justify-center">
 
         {/* Background Blob */}
 
@@ -149,11 +149,11 @@ export default function AboutImage() {
             loading="lazy"
             className="
               w-full
-              max-w-[320px]
+              max-w-[100px]
               rounded-[24px]
               object-cover
-              sm:max-w-[420px]
-              lg:max-w-[500px]
+              sm:max-w-[340px]
+              lg:max-w-[380px]
             "
           />
         </motion.div>

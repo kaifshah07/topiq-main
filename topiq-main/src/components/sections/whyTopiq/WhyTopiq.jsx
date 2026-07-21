@@ -1,7 +1,6 @@
 // src/components/sections/whyTopiq/WhyTopiq.jsx
 
 import FadeUp from "../../../animations/FadeUp";
-import AnimatedText from "../../../animations/AnimatedText";
 import AnimatedSection from "../../../animations/AnimatedSection";
 
 import WhyTopiqGrid from "./WhyTopiqGrid";
@@ -115,7 +114,7 @@ export default function WhyTopiq() {
                 text-4xl
                 font-extrabold
                 leading-tight
-  text-white
+                text-slate-900
                 md:text-5xl
                 "
               >

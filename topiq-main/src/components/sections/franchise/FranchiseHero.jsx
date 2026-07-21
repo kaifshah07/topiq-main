@@ -50,6 +50,8 @@ export default function FranchiseHero() {
         items-center
         max-w-4xl
         text-center
+        lg:items-start
+        lg:text-left
       "
     >
 
@@ -131,7 +133,7 @@ export default function FranchiseHero() {
         "
       >
 
-        <span className="block text-center">
+        <span className="block text-center lg:text-left">
           {franchiseData.title}
         </span>
 
@@ -184,7 +186,7 @@ export default function FranchiseHero() {
 
       {/* CTA */}
 
-      <ScaleIn delay={0.45} className="flex w-full justify-center">
+      <ScaleIn delay={0.45} className="flex w-full justify-center lg:justify-start">
 
         <motion.a
           {...buttonHover}

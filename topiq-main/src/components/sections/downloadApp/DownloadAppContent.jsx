@@ -44,9 +44,9 @@ export default function DownloadAppContent() {
       {/* Feature Stack Layout block loops */}
       <div className="w-full mt-2">
         <FadeUp delay={0.35}>
-          <div className="flex flex-col gap-y-5">
+          <div className="download-features-mobile-row flex flex-col gap-y-5">
             {downloadAppData.features.map((feature) => (
-              <div key={feature.id} className="flex items-start gap-4 w-full">
+              <div key={feature.id} className="download-feature-mobile-card flex items-start gap-4 w-full">
                 <CheckCircle2 size={18} className="mt-1 shrink-0 text-blue-600" />
                 <div className="flex flex-col gap-y-0.5">
                   <h4 className="font-bold text-slate-950 text-base">

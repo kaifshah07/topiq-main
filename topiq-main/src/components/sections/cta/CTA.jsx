@@ -8,7 +8,7 @@ export default function CTA() {
       <div className="absolute -left-40 top-0 h-[420px] w-[420px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none" />
       <div className="absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-cyan-100/40 blur-3xl pointer-events-none" />
       <div className="absolute inset-0 opacity-[0.015] [background-image:linear-gradient(to_right,#01295A_1px,transparent_1px),linear-gradient(to_bottom,#01295A_1px,transparent_1px)] [background-size:42px_42px] pointer-events-none" />
-      <div className="container relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-fullflex flex-col items-center">
+      <div className="container relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-5 sm:px-6 lg:px-8">
         <AnimatedSection animation="fadeUp" className="w-full">
           <div className="grid items-center gap-12 lg:gap-16 xl:gap-24 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="w-full">

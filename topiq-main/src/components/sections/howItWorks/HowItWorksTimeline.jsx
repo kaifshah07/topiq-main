@@ -88,6 +88,7 @@ export default function HowItWorksTimeline(){
         grid
         gap-10
         lg:grid-cols-2
+        mobile-grid-3
         "
 
       >

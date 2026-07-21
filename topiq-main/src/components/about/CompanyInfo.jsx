@@ -17,7 +17,7 @@ export default function CompanyInfo() {
           src={logo}
           alt="TOPIQ Talent Test"
           className="
-            h-24
+            h-20
             w-auto
             object-contain
             drop-shadow-xl

@@ -57,6 +57,7 @@ export default function ExamCategoriesGrid() {
       lg:grid-cols-3
       ui-card-grid
       exam-category-grid
+      mobile-grid-3
       "
 
     >

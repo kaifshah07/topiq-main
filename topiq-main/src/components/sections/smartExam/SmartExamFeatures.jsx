@@ -48,6 +48,7 @@ export default function SmartExamFeatures(){
       sm:grid-cols-2
       lg:grid-cols-3
       ui-card-grid
+      mobile-grid-3
       "
 
     >

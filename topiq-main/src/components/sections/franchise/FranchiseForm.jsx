@@ -187,9 +187,10 @@ export default function FranchiseForm() {
           border
           border-slate-200
           bg-white
-          p-8
+          p-5
           shadow-xl
-          lg:p-10
+          sm:p-7
+          lg:p-8
         "
       >
 
@@ -202,13 +203,13 @@ export default function FranchiseForm() {
 
           <div
             className="
-              mb-8
+              mb-5
             "
           >
 
             <h3
               className="
-                text-3xl
+                text-2xl
                 font-extrabold
                 text-slate-900
               "
@@ -245,7 +246,7 @@ export default function FranchiseForm() {
         <form
           onSubmit={handleSubmit}
           className="
-            space-y-5
+            space-y-4
           "
         >
 
@@ -254,7 +255,8 @@ export default function FranchiseForm() {
           <div
             className="
               grid
-              gap-5
+              gap-3
+              sm:grid-cols-2
               md:grid-cols-2
             "
           >

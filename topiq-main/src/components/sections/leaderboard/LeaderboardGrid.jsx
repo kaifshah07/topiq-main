@@ -34,6 +34,7 @@ className="
 grid
 gap-8
 md:grid-cols-3
+leaderboard-features-mobile-row
 "
 >
 
@@ -52,6 +53,8 @@ icon={item.icon}
 title={item.title}
 
 description={item.description}
+
+accent="from-blue-500 to-indigo-600"
 
 />
 

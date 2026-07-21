@@ -66,6 +66,7 @@ export default function LearningGroupGrid(){
       sm:grid-cols-2
       lg:grid-cols-3
       learning-groups-grid
+      mobile-grid-3
       "
 
     >
@@ -126,9 +127,6 @@ export default function LearningGroupGrid(){
 
 
             />
-
-
-
           )
 
         )

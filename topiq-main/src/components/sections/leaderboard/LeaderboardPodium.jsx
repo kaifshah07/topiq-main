@@ -14,6 +14,7 @@ className="
 grid
 gap-8
 md:grid-cols-3
+leaderboard-mobile-row
 "
 >
 
