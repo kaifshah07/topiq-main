@@ -69,7 +69,8 @@ export default function LearningGroupImage(){
         className="
         relative
         mx-auto
-        max-w-xl
+        w-full
+        max-w-[540px]
         "
 
       >
@@ -590,14 +591,18 @@ export default function LearningGroupImage(){
           <img
 
 
-            src="/images/learning-groups.webp"
+            src="/image/6.png"
 
 
             alt="TOPIQ learning groups"
 
 
             className="
+            h-[340px]
             w-full
+            object-cover
+            sm:h-[420px]
+            lg:h-[480px]
             rounded-[2rem]
             shadow-2xl
             "

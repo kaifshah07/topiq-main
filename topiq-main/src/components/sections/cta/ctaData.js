@@ -25,7 +25,7 @@ const ctaData = {
     { id: 5, title: "Scholarships & Rewards" },
     { id: 6, title: "Available 24×7 Anywhere" },
   ],
-  illustration: "/student.png",
+  illustration: "/image/13.png",
   accent: "from-[#01295A] via-blue-800 to-[#FE7C02]",
   background: {
     glow1: "bg-white-500/10",

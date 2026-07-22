@@ -144,8 +144,7 @@ export default function AboutImage() {
           "
         >
           <img
-            src={logo}
-            alt="TOPIQ Learning Platform"
+src="/image/2.png"            alt="TOPIQ Learning Platform"
             loading="lazy"
             className="
               w-full

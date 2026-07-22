@@ -20,8 +20,7 @@ export default function HowItWorksIllustration() {
 
 
  <img
-  src="/student.png"
-  alt="TOPIQ learning process"
+src="/image/3.png"  alt="TOPIQ learning process"
   loading="lazy"
   className="
     w-full

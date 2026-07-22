@@ -335,7 +335,7 @@ export default function AwardsIllustration() {
 
           <img
 
-            src="/student.png"
+            src="/image/9.png"
 
             alt="TOPIQ Awards and Scholarships"
 

@@ -38,6 +38,7 @@ export default function DesktopMenu() {
                 onMouseEnter={() => setActiveDropdown(item.type)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
+                
                 <button
                   className={`flex items-center gap-1 rounded-full px-4 py-2.5 text-[15px] font-semibold transition-all duration-300 ${
                     open || active
@@ -112,7 +113,7 @@ export default function DesktopMenu() {
             <Link
               key={item.name}
               to={item.path}
-              className={`rounded-full px-4 py-2.5 text-[15px] font-semibold transition-all duration-300 ${
+              className={`rounded-full px-[32px] py-[12px] text-[15px] font-semibold leading-none transition-all duration-300 ${
                 item.highlight
                   ? "bg-[#FE7C02] text-white shadow-lg shadow-orange-200 hover:scale-105"
                   : active

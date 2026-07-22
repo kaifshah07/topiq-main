@@ -56,7 +56,8 @@ export default function DashboardIllustration() {
         className="
         relative
         mx-auto
-        max-w-xl
+        w-full
+        max-w-[540px]
         "
       >
 
@@ -328,17 +329,12 @@ export default function DashboardIllustration() {
 
         >
 
-          <div className="performance-mockup" aria-hidden="true">
-            <div className="performance-mockup__rail"><i /><i /><i /><i /><i /></div>
-            <div className="performance-mockup__body">
-              <div className="performance-mockup__head"><span /><i /><i /></div>
-              <div className="performance-mockup__cards"><div><i /><span /></div><div><i /><span /></div><div><i /><span /></div></div>
-              <div className="performance-mockup__main">
-                <div className="performance-mockup__graph"><span /><span /><span /><span /><span /><span /></div>
-                <div className="performance-mockup__rings"><i /><i /><i /></div>
-              </div>
-            </div>
-          </div>
+          <img
+            src="/image/5.png"
+            alt="TOPIQ performance dashboard"
+            className="h-[340px] w-full rounded-[2rem] object-cover drop-shadow-2xl sm:h-[420px] lg:h-[480px]"
+            loading="lazy"
+          />
 
         </motion.div>
 

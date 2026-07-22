@@ -56,7 +56,7 @@ export default function DownloadAppImage() {
           className="relative z-10 overflow-hidden rounded-[3rem] w-full border border-slate-200/65 bg-white p-3 shadow-[0_30px_70px_rgba(1,41,90,0.07)]"
         >
           <img
-            src={downloadAppData.phoneMockup}
+            src="image/11.png"
             alt="TOPIQ learning platform interface preview panel dashboard on high end mobile smartphone viewport device mockup canvas"
             className="w-full h-auto min-h-[400px] max-h-[560px] rounded-[2.2rem] object-cover bg-slate-50"
             loading="lazy"

@@ -665,7 +665,7 @@ export default function VisionMissionImage(){
 
 
 
-            src="/images/vision-mission.webp"
+            src="/image/10.png"
 
 
 

@@ -6,7 +6,6 @@ import FadeUp from "../../../animations/FadeUp";
 import SlideRight from "../../../animations/SlideRight";
 
 import {
-  floatingAnimation,
   buttonHover,
 } from "../../../utils/animationVariants";
 
@@ -154,148 +153,16 @@ export default function Hero() {
           {/* RIGHT */}
 <SlideRight>
   <motion.div
-    className="page-visual hero-page-visual relative mx-auto flex w-full max-w-[270px] sm:max-w-[320px] lg:max-w-[380px] items-center justify-center"
+    className="page-visual hero-page-visual relative mx-auto flex w-full max-w-[400px] sm:max-w-[320px] lg:max-w-[380px] items-center justify-center"
   >
     {/* Background Glow */}
     <div className="absolute inset-0 rounded-full bg-blue-200/30 blur-3xl" />
 
-    {/* Square Glass Card */}
-    <div
-      className="
-        relative
-        aspect-square
-        w-full
-        overflow-hidden
-        rounded-[28px]
-        border
-        border-white/80
-        bg-white/80
-        p-3
-        shadow-[0_24px_70px_rgba(1,41,90,0.16)]
-        backdrop-blur-xl
-      "
-    >
-      {/* Top Gradient */}
-      <div className="absolute inset-x-0 top-0 h-24 bg-linear-to-br from-blue-500/10 via-transparent to-transparent" />
-
-      {/* Dashboard */}
-      <motion.div
-        animate="animate"
-        variants={floatingAnimation}
-        className="hero-dashboard h-full w-full"
-        aria-hidden="true"
-      >
-        <div className="hero-dashboard__sidebar">
-          <span className="hero-dashboard__logo" />
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-
-        <div className="hero-dashboard__content">
-          <div className="hero-dashboard__topbar">
-            <span />
-            <i />
-            <i />
-          </div>
-
-          <div className="hero-dashboard__welcome">
-            <div>
-              <span />
-              <span />
-            </div>
-            <i />
-          </div>
-
-          <div className="hero-dashboard__metrics">
-            <div>
-              <i />
-              <span />
-              <span />
-            </div>
-
-            <div>
-              <i />
-              <span />
-              <span />
-            </div>
-
-            <div>
-              <i />
-              <span />
-              <span />
-            </div>
-          </div>
-
-          <div className="hero-dashboard__lower">
-            <div className="hero-dashboard__chart">
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-
-            <div className="hero-dashboard__progress">
-              <i />
-              <i />
-              <i />
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Floating Card */}
-      <div
-        className="
-          absolute
-          left-4
-          bottom-4
-          rounded-2xl
-          border
-          border-white/70
-          bg-white/95
-          px-4
-          py-3
-          shadow-xl
-        "
-      >
-        <div className="flex items-center gap-2 text-sm font-semibold text-slate-800">
-          <Sparkles size={15} className="text-[#FE7C02]" />
-          Personalized Plans
-        </div>
-
-        <p className="mt-1 text-xs text-slate-500">
-          Adaptive study routines
-        </p>
-      </div>
-
-      {/* Live Card */}
-      <div
-        className="
-          absolute
-          right-4
-          top-4
-          rounded-2xl
-          border
-          border-orange-100
-          bg-orange-50/95
-          px-4
-          py-3
-          shadow-lg
-        "
-      >
-        <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-600">
-          LIVE
-        </div>
-
-        <div className="text-xl font-bold text-slate-900">
-          98.4%
-        </div>
-      </div>
-    </div>
+    <img
+      src="/image/1.png"
+      alt="TOPIQ learning platform"
+      className="relative z-10 h-auto w-full object-contain drop-shadow-2xl"
+    />
   </motion.div>
 </SlideRight>
 

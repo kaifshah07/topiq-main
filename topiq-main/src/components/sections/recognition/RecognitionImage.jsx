@@ -70,7 +70,8 @@ export default function RecognitionImage(){
         className="
         relative
         mx-auto
-        max-w-xl
+        w-full
+        max-w-[460px]
         "
 
       >
@@ -668,7 +669,7 @@ export default function RecognitionImage(){
           <img
 
 
-            src="/images/recognition.webp"
+            src="/image/9.png"
 
 
 
@@ -677,7 +678,11 @@ export default function RecognitionImage(){
 
 
             className="
+            h-[260px]
             w-full
+            object-cover
+            sm:h-[300px]
+            lg:h-[340px]
             rounded-[2rem]
             border
             border-slate-200

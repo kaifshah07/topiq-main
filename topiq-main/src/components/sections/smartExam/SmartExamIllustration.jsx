@@ -59,7 +59,8 @@ export default function SmartExamIllustration(){
         className="
         relative
         mx-auto
-        max-w-xl
+        w-full
+        max-w-[540px]
         "
 
       >
@@ -299,12 +300,16 @@ export default function SmartExamIllustration(){
 
           <img
 
-            src="/images/smart-exam-dashboard.webp"
+            src="/image/4.png"
 
             alt="TOPIQ smart exam analytics dashboard"
 
             className="
+            h-[340px]
             w-full
+            object-cover
+            sm:h-[420px]
+            lg:h-[480px]
             rounded-[2rem]
             drop-shadow-2xl
             "
